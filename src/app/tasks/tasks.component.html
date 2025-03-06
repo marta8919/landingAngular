@@ -1,7 +1,12 @@
+@if(isAddingTask){
+<app-new-task (close)="onCloseAddTask()" [userId]="userId" />
+}
 <section id="tasks">
   <header>
     <h2>{{ name }}'s Tasks</h2>
-    <menu><button>Add Task</button></menu>
+    <menu>
+      <button (click)="onStartAddTask()">Add Task</button>
+    </menu>
   </header>
 
   <ul>
